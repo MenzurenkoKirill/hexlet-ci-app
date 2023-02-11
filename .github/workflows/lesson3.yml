@@ -1,32 +1,15 @@
-name: hello-world
+name: setup-and-test
 on: push
 jobs:
-  setup:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
-      - name: setup process
-        run: make setup
-      - uses: actions/upload-artifact@v3
-  start:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/download-artifact@v3
-      - name: setup start
-        run: make start
-      - uses: actions/upload-artifact@v3
-  test:
-    needs: start
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: test process
-        run: make test
-  lint:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - name: lint process
-        run: make lint
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          cache: npm
+      - run: make setup
+      - run: make test
+      - run: make lint
