@@ -1,4 +1,4 @@
-![example event parameter](https://github.com/MenzurenkoKirill/hexlet-ci-app/actions/workflows/lessons3.yml/badge.svg?event=push)
+![example event parameter](https://github.com/MenzurenkoKirill/hexlet-ci-app/actions/workflows/lesson3.yml/badge.svg?event=push)
 # Example app for CI Hexlet course
 
 Starting boilerplate of [Strapi](https://strapi.io/) application
