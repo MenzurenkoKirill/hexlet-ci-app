@@ -7,13 +7,15 @@ jobs:
       - uses: actions/checkout@v2
       - name: setup process
         run: make setup
+      - uses: actions/upload-artifact@v3
   start:
     needs: setup
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
       - name: setup start
         run: make start
+      - uses: actions/upload-artifact@v3
   test:
     needs: start
     runs-on: ubuntu-latest
