@@ -4,17 +4,20 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: setup process
         run: make setup
   start:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: setup start
         run: make start
   test:
     needs: start
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: test process
         run: make test
