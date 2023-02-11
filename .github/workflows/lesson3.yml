@@ -1,0 +1,20 @@
+name: hello-world
+on: push
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup process
+        run: make setup
+  start:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup start
+        run: make start
+  test:
+    needs: start
+    runs-on: ubuntu-latest
+    steps:
+      - name: test process
+        run: make test
