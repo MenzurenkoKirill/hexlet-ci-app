@@ -1,5 +1,5 @@
 # Example app for CI Hexlet course
-
+![example event parameter](https://github.com/MenzurenkoKirill/hexlet-ci-app/actions/workflows/lessons3.yml/badge.svg?event=push)
 Starting boilerplate of [Strapi](https://strapi.io/) application
 
 ## System requirements
